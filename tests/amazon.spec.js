@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
   await page.goto('https://www.amazon.com/');
-  await page.getByRole('button', { name: 'Submit' });
+  
   await page.getByRole('link', { name: 'Hello, sign in Account & Lists' }).click();
   await page.getByRole('textbox', { name: 'Enter mobile number or email' }).click();
   await page.getByRole('textbox', { name: 'Enter mobile number or email' }).fill('grefbnfb');
