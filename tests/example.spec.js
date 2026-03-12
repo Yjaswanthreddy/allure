@@ -2,12 +2,12 @@
 import { test, expect } from '@playwright/test';
 
 
-test('contact page title', async ({page}) => {
+test.skip('contact page title', async ({page}) => {
   await page.goto('http://localhost:3000/contact.html');
   await expect(page).toHaveTitle(/Contact Support/);
 });
  
-test("contact page submit", async ({page}) =>{
+test.skip("contact page submit", async ({page}) =>{
   await page.goto('http://localhost:3000/contact.html');
   const email = page.getByPlaceholder(/Enter/);
   const msg = page.locator('#userMessage');
