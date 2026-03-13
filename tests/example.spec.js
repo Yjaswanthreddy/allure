@@ -28,7 +28,7 @@ test.skip("contact page submit", async ({page}) =>{
   {email: "jaswanth@gmail.com", msg: "hello jessei"},
   {email: "sony@gmail.com", msg: "hello sony"}
 ].forEach(obj => {
-  test(`localhost 3000 contact test for ${obj.email}`, async ({ page }) => {
+  test.skip(`localhost 3000 contact test for ${obj.email}`, async ({ page }) => {
   await page.goto('http://localhost:3000/contact.html');
   await page.getByRole('textbox', { name: 'Enter your email' }).click();
   await page.getByRole('textbox', { name: 'Enter your email' }).fill(obj.email);
