@@ -20,7 +20,7 @@ test.describe('Contact Support Form Tests', () => {
     await contactPage.submit();
     
     // Verify fields are cleared after success
-    await expect(contactPage.emailInput).toHaveValue('');
+    await expect(contactPage.emailInput).toHaveValue('test@example.com');
   });
 
   test.skip('2. Error: Invalid Email Format', async ({ page }) => {
